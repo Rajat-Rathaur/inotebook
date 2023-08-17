@@ -1,0 +1,83 @@
+{
+    "info": {
+        "_postman_id": "d0e6ae8f-aa85-4e8d-b5e7-77ef9090a682",
+        "name": "inotebook",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Aunthentication",
+            "item": [
+                {
+                    "name": "create new user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/auth/createUser",
+                            "path": [
+                                "api",
+                                "auth",
+                                "createUser"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Mehtafdhf9\",\n  \"email\": \"hymfbdfnbehta@gmail.com\",\n  \"password\": \"fnfdrgd56cam222\"\n  \n}"
+                        }
+                    }
+                },
+                {
+                    "name": "user login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/auth/login",
+                            "path": [
+                                "api",
+                                "auth",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"rohit@gmail.com\",\n  \"password\": \"abcd123\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
