@@ -1,13 +1,14 @@
 console.log("Server started")
 import connectToMongo from './db.js';
 import authrouter from './routes/auth.js';
+import cors from 'cors';
 connectToMongo();
 import express from 'express';
 import noterouter from './routes/notes.js';
 const app = express()
 const port  = 5000;
 app.use(express.json())
-
+app.use(cors())
 app.use('/api/auth', authrouter);
 app.use('/api/notes', noterouter);
 
